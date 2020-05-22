@@ -1,6 +1,8 @@
 #include <stdio.h>
+
 // For strncpy
 #include <string.h>
+
 // For isalpha()
 #include <ctype.h>
 
@@ -16,7 +18,7 @@ void convert_to_grade(int index, char *pszGrade, int buffersize);
 int main(void)
 {
 
-    /* --- Request text from user --- */
+    // Request text from user
     char plaintext_array[1000];
     printf("Text: ");
 
@@ -45,7 +47,6 @@ int main(void)
     index = (0.0588 * l) - (0.296 * s) - 15.8;
     rounded_answer = roundi(index);
 
-    // Todo: Work out how many bytes to allocate
     char grade[100];
     convert_to_grade(rounded_answer, grade, sizeof(grade));
 }
