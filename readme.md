@@ -10,4 +10,4 @@ To clear the terminal you can use the shortcut
 Ctrl + Alt + ,
 
 To run the program in Visual Studio code, you use:
-$ ./program name
+$ ./program nameset up ssl for ubuntu migration on 22.05.20
