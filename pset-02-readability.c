@@ -11,14 +11,14 @@
 int count_letters(char array_of_text[]);
 int count_specific_character(char array_of_text[], char symbol);
 // Declare function which rounds a float to the nearest whole number
-int roundi(float number);
+int round_float(float number);
 // When declaring a pointer, you should write the * next to the variable as opposed to writing it next to the type (i.e. avoid char* pszGrade)
 void convert_to_grade(int index, char *pszGrade, int buffersize);
 
-/* --- Program does not take in any parameters; 'void' explicitly states that the function does not expect to receive any parameters from its caller --- */
+// Program does not take in any parameters
+// 'void' explicitly states that the function does not expect to receive any parameters from its caller
 int main(void)
 {
-
     // Request text from user
     char plaintext_array[1000];
     printf("Text: ");
@@ -46,16 +46,14 @@ int main(void)
 
     s = sentences * (100 / (float)words);
     index = (0.0588 * l) - (0.296 * s) - 15.8;
-    rounded_answer = roundi(index);
+    rounded_answer = round_float(index);
 
     char grade[100];
     convert_to_grade(rounded_answer, grade, sizeof(grade));
 }
 
-
 int count_letters(char array_of_text[])
 {
-
     int count_alpha = 0;
 
     for (int i = 0; array_of_text[i] != '\0'; i++)
@@ -68,7 +66,6 @@ int count_letters(char array_of_text[])
     }
 
     return count_alpha;
-
 }
 
 int count_specific_character(char array_of_text[], char symbol) 
@@ -84,10 +81,9 @@ int count_specific_character(char array_of_text[], char symbol)
     }
 
     return symbol_counter;
-
 }
 
-int roundi(float number)
+int round_float(float number)
 {
     return (number >= 0) ? (int)(number + 0.5) : (int)(number - 0.5);
 }
