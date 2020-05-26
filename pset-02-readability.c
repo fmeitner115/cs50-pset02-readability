@@ -6,7 +6,8 @@
 // For isalpha()
 #include <ctype.h>
 
-// Declare function prototype for count_letters function which takes in an input of an array of chars and returns an integer
+// Declare function prototype for count_letters function 
+// Function takes in an input of an array of chars and returns an integer
 int count_letters(char array_of_text[]);
 int count_specific_character(char array_of_text[], char symbol);
 // Declare function which rounds a float to the nearest whole number
